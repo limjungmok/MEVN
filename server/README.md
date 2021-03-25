@@ -1,0 +1,3 @@
+- express : nodeJS 웹서버 제작 어플리케이션
+- mongoose: mongoDB 라이브러리
+- body-parser: HTTP body를 오브젝트로 변경해주는 미들웨어
