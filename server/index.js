@@ -5,7 +5,6 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var app = express();
 
-
 // DB setting
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
@@ -29,6 +28,8 @@ db.on('error', function(err){
 });
 
 // Other settings
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(function (req, res, next) { // 1
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -44,6 +45,7 @@ app.use(function (req, res, next) { // 1
 
 // API
 app.use('/api/users', require('./api/users'));
+app.use('/api/carousels', require('./api/carousels'));
 
 // Port setting
 var port = 3999;
