@@ -24,12 +24,12 @@
 
 
 ## Subject
-- Redux의 Provider 개념
+- Context의 Provider 개념
 - 상태값이 변경될때 옵저버들에게 notify 해준다.
 
 
 ## State
-- Redux의 Store 개념
+- Context의 value 개념
 - 실제 상태값을 가지고 있고, 상태값을 업데이트한다.
 - 옵저버들에게 notify 할 때 새로운 상태값을 함께 전달한다.
 
